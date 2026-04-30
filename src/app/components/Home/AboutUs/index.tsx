@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-const AgriSection = () => {
+const AboutUs = () => {
   return (
     <section className='relative p-0' id='aboutus'>
       <div className='container px-4'>
@@ -50,4 +50,4 @@ const AgriSection = () => {
   )
 }
 
-export default AgriSection
+export default AboutUs

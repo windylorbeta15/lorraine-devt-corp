@@ -27,7 +27,7 @@ const WhyUs = () => {
   }, [])
 
   return (
-    <section id='features' className='bg-white-onion'>
+    <section id='whyus' className='bg-white-onion'>
       <div className='container  py-20'>
         <div className='text-center'>
           <p className='text-primary text-lg font-normal tracking-widest uppercase'>

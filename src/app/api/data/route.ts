@@ -10,7 +10,9 @@ import { FullMenuType } from '@/app/types/fullmenu'
 
 const HeaderData: HeaderItem[] = [
   { label: 'About Us', href: '/#aboutus', className: 'text-white' },
-  { label: 'Menu', href: '/#menu', className: 'text-white' },
+  { label: 'Our Work', href: '/#ourwork', className: 'text-white' },
+  { label: 'Team', href: '/#team', className: 'text-white' },
+  { label: 'Why Us', href: '/#whyus', className: 'text-white' },
   { label: 'Contact Us', href: '/#contactus', className: 'text-white' },
 ]
 

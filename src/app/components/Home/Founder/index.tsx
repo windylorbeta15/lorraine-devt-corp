@@ -25,7 +25,7 @@ const Founder = () => {
   }, [])
 
   return (
-    <section className='bg-white-onion'>
+    <section className='bg-white-onion' id='founder'>
       <div className='container my-20'>
         <div className='text-center'>
           <p className='text-primary text-lg font-normal mb-3 tracking-widest uppercase'>

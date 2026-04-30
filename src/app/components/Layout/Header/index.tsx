@@ -63,7 +63,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 z-40 py-4 w-full transition-all duration-300 bg-white/20 backdrop-blur-md ${
+      className={`fixed top-0 z-40 py-4 w-full transition-all duration-300 bg-white/40 backdrop-blur-md ${
         sticky ? 'shadow-lg bg-white' : 'shadow-none'
       }`}>
       <div>
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
           <div>
             <Logo />
           </div>
-          <nav className='hidden lg:flex grow items-center gap-4 xl:gap-6  justify-center'>
+          <nav className='hidden lg:flex grow items-center gap-4 xl:gap-6  justify-center '>
             {headerLink.map((item, index) => (
               <HeaderLink key={index} item={item} />
             ))}
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
           <div className='flex items-center gap-2 lg:gap-3'>
             <Link
               href='#'
-              className='text-lg font-medium hover:text-primary hidden xl:block'>
+              className='text-lg font-medium hover:text-white hover:bg-green-apple/75 text-primary bg-green-apple px-4 py-2 rounded-md hidden xl:block'>
               <Icon
                 icon='solar:phone-bold'
                 className='text-primary text-3xl lg:text-2xl inline-block me-2'
@@ -123,7 +123,7 @@ const Header: React.FC = () => {
           </div>
           <Link
             href='#'
-            className='text-lg font-medium hover:text-primary block md:hidden mt-6 p-4'>
+            className='text-xs font-medium hover:text-primary block md:hidden mt-6 p-4'>
             <Icon
               icon='solar:phone-bold'
               className='text-white text-3xl lg:text-2xl inline-block me-2'

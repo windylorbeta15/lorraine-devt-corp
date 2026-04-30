@@ -1,7 +1,7 @@
 import React from 'react'
-import Hero from '@/app/components/Home/Hero'
+import HomeBanner from '@/app/components/Home/HomeBanner'
 import WhyUs from '@/app/components/Home/WhyUs'
-import AgriSection from '@/app/components/Home/AgriSection'
+import AboutUs from '@/app/components/Home/AboutUs'
 import Team from '@/app/components/Home/Team'
 import Founder from '@/app/components/Home/Founder'
 import OurWork from '@/app/components/Home/OurWork'
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <HomeBanner />
       <WhyUs />
-      <AgriSection />
+      <AboutUs />
       <Team />  
       <OurWork />
       <Founder />

@@ -30,7 +30,7 @@ const OurWork = () => {
   }, [])
 
   return (
-    <section id='menu' className='scroll-mt-20'>
+    <section id='ourwork' className='scroll-mt-20'>
       <div className='container py-20'>
         <div className='text-center'>
           <p className='text-primary text-lg font-normal mb-3 tracking-widest uppercase'>

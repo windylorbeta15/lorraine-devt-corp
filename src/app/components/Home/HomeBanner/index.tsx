@@ -99,7 +99,7 @@ const heroFeatures = [
 const HERO_BG_CROSSFADE_MS = 800
 const HERO_AUTO_ROTATE_MS = 3000
 
-const Hero = () => {
+const HomeBanner = () => {
   const [activeFeatureIndex, setActiveFeatureIndex] = useState(0)
   const [autoRotateEpoch, setAutoRotateEpoch] = useState(0)
   const bgIndex = heroFeatures[activeFeatureIndex]
@@ -118,7 +118,7 @@ const Hero = () => {
 
   return (
     <section
-      id='home-section'
+      id='home'
       className='relative flex min-h-[min(100svh,56rem)] flex-col overflow-hidden bg-black py-0 md:min-h-[min(100svh,60rem)]'
     >
       <div className='pointer-events-none absolute inset-0' aria-hidden>
@@ -211,4 +211,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default HomeBanner

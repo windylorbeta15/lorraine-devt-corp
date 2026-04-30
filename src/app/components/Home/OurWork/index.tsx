@@ -73,7 +73,7 @@ const OurWork = () => {
                         className='object-cover w-full h-full'
                       />
                     )}
-                    <div className='w-full h-full absolute bg-black/40 top-full group-hover:top-0 duration-500 lg:p-12 md:p-8 p-3.5 flex flex-col items-start lg:gap-8 gap-4 justify-end'>
+                    <div className='w-full h-full absolute backdrop-blur-sm bg-black/40 top-full group-hover:top-0 duration-500 lg:p-12 md:p-8 p-3.5 flex flex-col items-start lg:gap-8 gap-4 justify-end'>
                       <p className='text-white lg:text-2xl text-xl'>
                         {item.name}
                       </p>

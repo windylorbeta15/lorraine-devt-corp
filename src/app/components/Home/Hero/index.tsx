@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { FeaturesType } from '@/app/types/features'
 
 type HeroFeatureIconProps = {
   className?: string
@@ -183,12 +184,14 @@ const Hero = () => {
                       }}
                       className='flex w-full cursor-pointer flex-col items-center gap-4 rounded-xl p-2 text-inherit transition hover:opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-apple'
                     >
-                      <Icon
-                        isActive={isActive}
-                        className={`pointer-events-none h-14 w-14 shrink-0 transition-colors ${
-                          isActive ? 'text-green-apple' : 'text-white'
-                        }`}
-                      />
+                      <span className='flex w-full justify-center'>
+                        <Icon
+                          isActive={isActive}
+                          className={`pointer-events-none h-14 w-14 shrink-0 transition-colors ${
+                            isActive ? 'text-green-apple' : 'text-white'
+                          }`}
+                        />
+                      </span>
                       <p
                         className={`pointer-events-none text-sm leading-snug font-semibold transition-colors sm:text-base ${
                           isActive ? 'text-green-apple' : 'text-white'

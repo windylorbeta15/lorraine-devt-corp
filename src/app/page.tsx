@@ -4,7 +4,7 @@ import WhyUs from '@/app/components/Home/WhyUs'
 import AgriSection from '@/app/components/Home/AgriSection'
 import Team from '@/app/components/Home/Team'
 import Founder from '@/app/components/Home/Founder'
-import Gallery from '@/app/components/Home/Gallery'
+import OurWork from '@/app/components/Home/OurWork'
 import ContactUs from '@/app/components/Home/ContactUs'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function Home() {
       <WhyUs />
       <AgriSection />
       <Team />  
-      <Gallery />
+      <OurWork />
       <Founder />
       <ContactUs />
     </main>

@@ -4,7 +4,7 @@ import { HeaderItem } from '@/app/types/menu'
 import { FeaturesType } from '@/app/types/features'
 import { ExpertChiefType } from '@/app/types/expertchief'
 import { FounderType } from '@/app/types/founder'
-import { GalleryImagesType } from '@/app/types/galleryimage'
+import { GalleryImagesType } from '@/app/types/ourowkimage'
 import { FooterLinkType } from '@/app/types/footerlink'
 import { FullMenuType } from '@/app/types/fullmenu'
 
@@ -82,29 +82,38 @@ const GalleryImagesData: GalleryImagesType[] = [
   {
     src: '/images/Gallery/urban-design.jpg',
     name: 'Urban Design',
-
-  },
-  {
-    src: '/images/Gallery/harvest-machine.jpg',
-    name: 'Harvest Machine',
-
+    description:
+      'Landscape and infrastructure design that blends productive green space with how communities live and work.',
   },
   {
     src: '/images/Gallery/dairy-farming.jpg',
     name: 'Dairy Farming',
-
+    description:
+      'Dairy farming is the practice of raising cattle to produce milk and other dairy products.',
+  },
+  {
+    src: '/images/Gallery/fish-harvest.jpg',
+    name: 'Fish Harvesting',
+    description:
+      'Fish harvesting is the process of catching fish from the water.',
   },
   {
     src: '/images/Gallery/golden-grain.jpg',
     name: 'Golden Grain',
+    description:
+      'Field-to-storage practices that protect yield, grade, and value across the grain supply chain.',
   },
   {
     src: '/images/Gallery/ldc-resto-img.jpg',
     name: 'Restaurant',
+    description:
+      'Food experiences rooted in freshness, execution, and the story behind each plate.',
   },
   {
     src: '/images/Gallery/ldc-coffee-shop.jpg',
     name: 'Coffee Shop',
+    description:
+      'Warm, repeatable café operations—from sourcing and training to everyday guest rituals.',
   },
 ]
 

@@ -46,12 +46,12 @@ const WhyUs = () => {
                 <div
                   key={i}
                   className='p-8 relative rounded-3xl bg-linear-to-b from-avocado/25 to-white shadow-md shadow-avocado/25 hover:scale-105 transition duration-300 ease-in-out hover:cursor-pointer'>
-                  <div className='rounded-full flex justify-center absolute -top-[50%] sm:top-[-40%] md:top-[-55%] lg:top-[-35%] left-[0%]'>
+                  <div className='rounded-full flex justify-center absolute -top-[50%] sm:top-[-40%] md:top-[-55%] lg:top-[-35%] '>
                     <Image
                       src={items.imgSrc}
                       alt={items.imgSrc}
-                      width={510}
-                      height={10}
+                      width={250}
+                      height={250}
                     />
                   </div>
                   <p className='text-2xl text-black font-semibold text-center mt-16'>

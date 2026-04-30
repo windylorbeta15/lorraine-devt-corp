@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { FeaturesType } from '@/app/types/features'
 import FeaturesSkeleton from '../../Skeleton/Features'
 
-const Features = () => {
+const WhyUs = () => {
   const [features, setFeatures] = useState<FeaturesType[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -27,14 +27,14 @@ const Features = () => {
   }, [])
 
   return (
-    <section id='features'>
-      <div className='container bg-white-onion py-20'>
+    <section id='features' className='bg-white-onion'>
+      <div className='container  py-20'>
         <div className='text-center'>
           <p className='text-primary text-lg font-normal tracking-widest uppercase'>
             Why Choose Us
           </p>
           <h2 className='font-semibold lg:max-w-60% mx-auto mt-3 text-avocado-skin'>
-          Advancing Farming, Fisheries, and Food Experiences
+            Advancing Farming, Fisheries, and Food Experiences
           </h2>
         </div>
         <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-y-28 gap-x-6 mt-24'>
@@ -68,4 +68,4 @@ const Features = () => {
   )
 }
 
-export default Features
+export default WhyUs

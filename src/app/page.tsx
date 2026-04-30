@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from '@/app/components/Home/Hero'
-import Features from '@/app/components/Home/Features'
+import WhyUs from '@/app/components/Home/WhyUs'
 import AgriSection from '@/app/components/Home/AgriSection'
 import Team from '@/app/components/Home/Team'
 import Founder from '@/app/components/Home/Founder'
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Features />
+      <WhyUs />
       <AgriSection />
       <Team />  
       <Gallery />

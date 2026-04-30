@@ -164,10 +164,11 @@ const FooterLinkData: FooterLinkType[] = [
   {
     section: 'Company',
     links: [
-      { label: 'Home', href: '/' },
       { label: 'About Us', href: '/#aboutus' },
-      { label: 'Menu', href: '/#menu' },
-      { label: 'Reserve Table', href: '/#reserve' },
+    { label: 'Our Work', href: '/#ourwork' },
+    { label: 'Team', href: '/#team' },
+    { label: 'Why Us', href: '/#whyus', },
+    { label: 'Contact Us', href: '/#contactus'},
     ],
   },
 ]

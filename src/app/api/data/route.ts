@@ -18,10 +18,10 @@ const HeaderData: HeaderItem[] = [
 
 const FeaturesData: FeaturesType[] = [
   {
-    imgSrc: '/images/Features/field-planning.png',
-    heading: 'Field Planning',
+    imgSrc: '/images/Features/salt-production.png',
+    heading: 'Salt Production',
     subheading:
-      'Effective field planning is the foundation of a successful farm.',
+      'Salt production is the process of extracting salt from the sea or other sources.',
   },
   {
     imgSrc: '/images/Features/growth-monitoring.png',
@@ -40,19 +40,31 @@ const FeaturesData: FeaturesType[] = [
     heading: 'Farm Delivery',
     subheading:
       'Farm delivery brings fresh produce quickly and efficiently.',
+  },
+  {
+    imgSrc: '/images/Features/maintain-repair.png',
+    heading: 'Maintain and Repair',
+    subheading:
+      'Farm delivery brings fresh produce quickly and efficiently.',
+  },
+  {
+    imgSrc: '/images/Features/fish-culturing.png',
+    heading: 'Fish Culturing',
+    subheading:
+      'Farm delivery brings fresh produce quickly and efficiently.',
   }
 ]
 
 const ExpertChiefData: ExpertChiefType[] = [
   {
-    profession: 'Senior Chef',
+    profession: 'Farm Manager',
     name: 'John Doe',
-    imgSrc: '/images/member/team-john-doe.png',
+    imgSrc: '/images/member/farmer-img.png',
   },
   {
-    profession: 'Junior Chef',
+    profession: 'Fisheries Specialist',
     name: 'Jane Doe',
-    imgSrc: '/images/member/team-john-doe.png',
+    imgSrc: '/images/member/fishman-img.png',
   },
   {
     profession: 'Junior Chef',
@@ -95,15 +107,27 @@ const GalleryImagesData: GalleryImagesType[] = [
   },
   {
     src: '/images/Gallery/fish-harvest.jpg',
-    name: 'Fish Harvesting',
+    name: 'Fish Culturing',
     description:
-      'Fish harvesting is the process of catching fish from the water.',
+      'Fish culturing is the process of raising fish in a controlled environment.',
   },
   {
     src: '/images/Gallery/golden-grain.jpg',
     name: 'Golden Grain',
     description:
       'Field-to-storage practices that protect yield, grade, and value across the grain supply chain.',
+  },
+  {
+    src: '/images/Gallery/salt-production.jpg',
+    name: 'Salt Production',
+    description:
+      'Salt production is the process of extracting salt from the sea or other sources.',
+  },
+  {
+    src: '/images/Gallery/maintain-repair.jpg',
+    name: 'Maintain and Repair',
+    description:
+      'Maintain and repair is the process of maintaining and repairing the equipment and infrastructure of the farm.',
   },
   {
     src: '/images/Gallery/ldc-resto-img.jpg',

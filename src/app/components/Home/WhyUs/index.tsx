@@ -37,7 +37,7 @@ const WhyUs = () => {
             Advancing Farming, Fisheries, and Food Experiences
           </h2>
         </div>
-        <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-y-28 gap-x-6 mt-24'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-y-28 gap-x-6 mt-24'>
           {loading
             ? Array.from({ length: 4 }).map((_, i) => (
                 <FeaturesSkeleton key={i} />
@@ -45,8 +45,8 @@ const WhyUs = () => {
             : features.map((items, i) => (
                 <div
                   key={i}
-                  className='p-8 relative rounded-3xl bg-linear-to-b from-avocado/25 to-white shadow-md shadow-avocado/25 hover:scale-105 transition duration-300 ease-in-out hover:cursor-pointer'>
-                  <div className='rounded-full flex justify-center absolute -top-[50%] sm:top-[-40%] md:top-[-55%] lg:top-[-35%] '>
+                  className='w-95 pb-20 px-8 relative rounded-3xl bg-linear-to-b from-avocado/25 to-white shadow-md shadow-avocado/25 hover:scale-105 transition duration-300 ease-in-out hover:cursor-pointer'>
+                  <div className='rounded-full flex justify-center absolute -top-[50%] sm:top-[-40%] md:top-[-55%] lg:top-[-35%] lg:left-[15%] mb-10'>
                     <Image
                       src={items.imgSrc}
                       alt={items.imgSrc}

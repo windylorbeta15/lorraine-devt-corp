@@ -2,16 +2,41 @@
 import Image from 'next/image'
 import Masonry from 'react-masonry-css'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import GalleryImagesSkeleton from '../../Skeleton/GalleryImages'
 import { GalleryImagesType } from '@/app/types/galleryimage'
 
-/** Render height (px) for the final gallery tile — matches source asset height. */
-const LAST_GALLERY_IMAGE_HEIGHT = 392
+const GALLERY_TILE_SHORT_HEIGHT = 330
+const GALLERY_TILE_TALL_HEIGHT = 460
+
+/** Masonry packs index 0,2,4… into column 0 and 1,3,5… into column 1 — vary by row so left↔right alternates. */
+function galleryTileHeightPx(index: number, columnCount: number) {
+  if (columnCount <= 1) {
+    return index % 2 === 0
+      ? GALLERY_TILE_SHORT_HEIGHT
+      : GALLERY_TILE_TALL_HEIGHT
+  }
+  const rowInColumn = Math.floor(index / columnCount)
+  const col = index % columnCount
+  const isShort =
+    col === 0 ? rowInColumn % 2 === 0 : rowInColumn % 2 === 1
+  return isShort ? GALLERY_TILE_SHORT_HEIGHT : GALLERY_TILE_TALL_HEIGHT
+}
+
+const MASONRY_ONE_COL_MQ = '(max-width: 500px)'
 
 const OurWork = () => {
   const [galleryImages, setGalleryImages] = useState<GalleryImagesType[]>([])
   const [loading, setLoading] = useState(true)
+  const [masonryColumnCount, setMasonryColumnCount] = useState(2)
+
+  useLayoutEffect(() => {
+    const mq = window.matchMedia(MASONRY_ONE_COL_MQ)
+    const sync = () => setMasonryColumnCount(mq.matches ? 1 : 2)
+    sync()
+    mq.addEventListener('change', sync)
+    return () => mq.removeEventListener('change', sync)
+  }, [])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,31 +73,22 @@ const OurWork = () => {
                   <GalleryImagesSkeleton key={i} />
                 ))
               : galleryImages.map((item, index) => {
-                  const isLast = index === galleryImages.length - 1
+                  const tileHeight = galleryTileHeightPx(
+                    index,
+                    masonryColumnCount
+                  )
                   return (
                   <div
                     key={index}
-                    style={
-                      isLast ? { height: LAST_GALLERY_IMAGE_HEIGHT } : undefined
-                    }
+                    style={{ height: tileHeight }}
                     className='overflow-hidden rounded-3xl mb-6 relative group'>
-                    {isLast ? (
-                      <Image
-                        src={item.src}
-                        alt={`${item.name}. ${item.description}`}
-                        fill
-                        sizes='(max-width: 500px) 100vw, 50vw'
-                        className='object-cover'
-                      />
-                    ) : (
-                      <Image
-                        src={item.src}
-                        alt={`${item.name}. ${item.description}`}
-                        width={600}
-                        height={500}
-                        className='object-cover w-full h-full'
-                      />
-                    )}
+                    <Image
+                      src={item.src}
+                      alt={`${item.name}. ${item.description}`}
+                      fill
+                      sizes='(max-width: 500px) 100vw, 50vw'
+                      className='object-cover'
+                    />
                     <div className='w-full h-full absolute backdrop-blur-sm bg-black/40 top-full group-hover:top-0 duration-500 lg:p-12 md:p-8 p-3.5 flex flex-col items-start lg:gap-8 gap-4 justify-end'>
                       <p className='text-white lg:text-2xl text-xl'>
                         {item.name}
